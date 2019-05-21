@@ -1,0 +1,62 @@
+/*左部分*/
+.z_top input{width: 50px;
+  height: 20px;
+  text-align: center;}
+
+.z_top input[type=text]::-webkit-input-placeholder{ 
+  color: #5f5f5f; 
+  font-size: 10px;
+}
+.z_top button{
+  background: #ff4466;
+  color:#fff;
+  border:0;
+  padding:0.2rem;
+}
+#container div{display:none;}
+#container .open{display:block;}
+#tab li a{color: #333;padding: 0.07rem 0.5rem;}
+h6{
+  border-top:1px solid #666;
+  padding-top:0.6rem;
+  font-weight: bold;
+}
+h6::after{
+  content: "— ";
+  float: right;
+  border:3px #000;
+}
+.p_left_ul{
+  height:12rem;
+  overflow: auto;
+  margin-left:1rem;
+} 
+/* 右部分 */
+ .card span:nth-child(2){
+  font-size:26px;
+  color:#ff4466;
+} 
+.card p:nth-child(3){
+  text-indent: 2rem;
+  color:rgb(122, 118, 118);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.card p:nth-child(4){
+  display: block;
+  color:#ccc;
+  text-decoration: underline;
+}
+/* 图片效果 */
+.card{position: relative;overflow: hidden;}
+.img_scale{
+  border-radius: 50%;
+}
+.img_scale:hover {
+  opacity: 0.8;
+} 
+
+

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.css"/>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <title>登录</title>
+    <link rel="stylesheet" href="../css/comment.css"/>
+    <link rel="stylesheet" href="../css/login.css"/>
+    <link rel="shortcut icon" href="../image/index/title.jpg">
+</head>
+<body>
+    <div class="container-fluid row m-0">
+        <div class="top col-12 p-0">
+            <i></i>
+            <span>欢迎登录</span>   
+        </div>
+    </div>
+    <div id="container mb-5 mt-5">
+        <div class="contain row  border  border-danger mb-5 mt-5">
+             <div  class="center offset-md-2" method="post" > 
+                <div class="from_top">
+                    <span>用户登录 </span>
+                </div>
+                <div class=" left mb-5">
+                    <div class="d1">
+                        <i class="i_01"></i>
+                        <input type="text" placeholder="初始用户名为dingding" class="input01" id='uname'  >
+                    </div>
+                    <div class="d1">
+                        <i class="i_02"></i>
+                        <input type="text" placeholder="初始密码为123456" class="input01 mt" id='upwd'  >
+                    </div>
+                    <p class="mt-2">
+                        <input type="checkbox"><span class="p_2 mr-5">记住密码</span>
+                        <a href="JavaScript:;" class="p_1 pl-5 ml-5">忘记密码</a>
+                    </p>
+                    <button onclick="login()" id="btn">登录</button>
+                </div>
+                <div class="bg-white right mt-5 p-2">
+                    <ul class="list-unstyled">
+                        <li><i class="l_01"></i></li>
+                        <li><i class="l_02"></i></li>
+                        <li><i class="l_03"></i></li>
+                    </ul>
+                </div>
+            </div> 
+        </div>
+    </div>
+    <footer>
+        <p>
+        曾经有一个时代叫汉唐， 曾经有一条河流叫长江， 曾经有一对图腾叫龙凤， 
+        曾经有一件羽衣——名叫霓裳！</p></footer>
+    <script>
+        var uname=document.getElementById("uname");
+        var btn=document.getElementById("btn");
+        function login(){
+			//1.创建xhr对象
+			var xhr=new XMLHttpRequest();
+			//2.绑定监听
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4&&xhr.status==200){
+                    var result=xhr.responseText; 
+				  	 if(result==1){
+                        var n=uname.value;
+                        console.log(n)
+                        sessionStorage.setItem("loginName",n);
+                        alert("2s后跳转首页");
+                        setTimeout(function(){
+                        location.href="/wangye/index.html";
+                        },2000);
+				  	//   window.location.href="/wangye/index.html";
+				      }else{
+                         alert(result);}
+				}
+			}
+			//3.创建请求
+			xhr.open("post","/mypor/login",true);
+			//4.发送请求
+			//修改请求头
+			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+			var formdata="uname="+uname.value+"&upwd="+upwd.value;
+            xhr.send(formdata);
+        }
+    </script>
+</body>
+</html>

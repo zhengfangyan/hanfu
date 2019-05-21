@@ -1,0 +1,57 @@
+*{margin:0;padding:0;}
+/* 顶部 */
+.container-fluid{
+  height:180px;
+  background:#dedede;
+}
+.top_1 {
+  text-align:center;
+  line-height:180px;
+}
+.top_1 span:nth-child(1){
+  color:#ff6699;
+  font-size:50px;
+  font-family:"STXingkai";
+}
+.top_1 span:nth-child(2){
+   color:#69c8f5;
+  font-size:37px;
+  font-family:"FZShuTi";
+}
+/* 主体 */
+#center{
+  margin: 2.5% 0;
+  background:url("../image/index/reg_back.png"); 
+  background-size:cover;
+}
+.sp1 a{color:#000;}
+.reg {
+  margin:0  60% 5% 8%;
+  padding: 2rem 2rem 2rem 4rem;
+  background:rgba(255,255,255,0.5);
+  font-size:23px;
+}
+div input[type=text]::-webkit-input-placeholder{font-size: 16px; }
+div input[type=password]::-webkit-input-placeholder{font-size: 16px; }
+div input[type=email]::-webkit-input-placeholder{font-size: 16px; }
+#uname_msg,#upwd_msg{font-size: 16px;}
+div .input01{
+  width:270px;
+  height:32px; 
+  padding-left:5px;
+  box-sizing:border-box;
+  outline:none;
+}
+div button{
+  margin-top:1rem;
+  margin-left: 7rem;
+  text-align: center;
+  width:150px;
+  height:40px;
+  border:0;
+  color:#fff;
+  background-image:-webkit-linear-gradient(left,#fd637f 0%,#ff4466 100%);
+  background-image:-moz-linear-gradient(left,#fd637f 0%,#ff4466 100%);
+  background-image:-ms-linear-gradient(left,#fd637f 0%,#ff4466 100%);
+  background-image:-o-linear-gradient(left,#fd637f 0%,#ff4466 100%);
+}

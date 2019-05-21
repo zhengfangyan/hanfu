@@ -1,0 +1,25 @@
+/*头部*/
+*{margin:0;padding:0;}
+.head{background: #ff4466;}
+.head .my_input{
+    margin:auto;
+    border:0;
+    color:#fff;
+    width:24.5rem;
+    height:2rem;
+    outline: none;
+    padding-left:2rem;
+    border-radius:5rem;
+    background:#ff627f;
+}
+.head .suos input[type=text]::-webkit-input-placeholder{ color: #ffb3bf; }
+.head .btn1{background: transparent;color:#fff;border:0;padding:0;outline: none;}
+.s_img{
+    position: relative;
+    left: -2.2rem;
+    top:-0.1rem;
+    width:20px;
+}
+.welcome{
+    color:#fff;
+}

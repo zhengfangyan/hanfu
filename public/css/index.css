@@ -1,0 +1,52 @@
+/*主体内容*/
+/* 标题 */
+div>p{
+    display:block;
+    text-align:center;
+    font-size:40px;
+    color:#8b8b8b;
+    font-family:"STXingkai";
+    margin:0.6rem 0;
+}
+/* 商品介绍 */
+.caption a{
+    color:#555;
+    padding-left: 3rem;
+    font-size: 14px;
+}
+.caption>a:hover{
+    color:#ff4466;
+}
+/* 图片放大动画 */
+.card{overflow: hidden;}
+@keyframes img_scale{
+    0%{transform:scale(0.7,0.7);}
+    100%{transform:scale(1.1,1.1);}
+}
+.card:hover .img_scale{
+    animation:img_scale 1s linear 0s 1;
+}
+/* 价格 */
+.my_pirce,.my_pirce_f{
+    color:#ff4466;
+    font-size:40px;
+}
+.my_pirce_f{
+    font-size:20px;
+}
+/* 第六层 */
+.pinpai_li{
+    width:12rem;
+    height:9rem;
+    border: 1px solid #f3f3f3;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.pinpai_img{
+    width: 4.8rem;
+    height:4.5rem;
+}
+.pinpai_li:hover{
+    background:#b9b9b9;
+}

@@ -1,0 +1,10 @@
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "|";
+    color:#ccc;
+    margin:0 2rem;
+}
+.foot_a{color:#666;font-size: 13px; }
+.foot_a:hover{
+    color:#ff4466;
+    text-decoration: none;
+}

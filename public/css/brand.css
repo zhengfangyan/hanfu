@@ -1,0 +1,61 @@
+/* brand.css */
+.w_img{
+  width:6rem;
+  margin-left:0.5rem;
+}
+.d_border{ border-right:1px solid #ccc;}
+.media:first-child,.media:nth-child(2){border-bottom: 1px dashed #333; }
+.media .card{border:0;}
+ .caption span:nth-child(1){
+  font-size: 28px;
+  color:#ff4466;
+  
+} 
+.caption p:nth-child(1){
+  text-indent: 2rem;
+  font-size:15px;
+  color:#555;
+}
+.caption p:nth-child(1):hover{color:#ff4466;}
+.d_border p span{color:#ff4466;font-size: 25px;}
+ li{
+	list-style:none;
+}
+.font_small{font-size:14px;}
+.card:hover img{box-shadow: 1px 2px 20px 2px #011 ;}
+
+.brand ul li{padding-left:2.3rem;}
+.brand  li a{color:#555;text-align: center;margin: auto; }
+.brand li a:hover{color:#ff4466;}
+.brand li a p{text-align: center; padding:0;}
+.open{
+    font-size:2.5rem;
+    color:#555;
+    font-family:"STXingkai";
+    background: #f6f6f6;
+    padding:1rem 1rem 1rem 2rem;
+ }
+ .right{
+   margin-top:110px;
+ }
+ .out {
+  position: relative;
+  border: 2px #ff4466 solid;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  float: left;
+  z-index: 11;
+  margin: 1px 8px 0 20px;
+}
+.right .solis{
+margin:0 0 3px 26px;
+height:40px;
+border-left:1px #ff4466 solid;
+}
+.right a{color:#555;}
+.right a:hover{color:#ff4466;}
+#menu{width: 88px;height: auto; position: fixed;top: 50%;right: 15px;margin-top: -135px;} 
+#menu ul{display: block;list-style: none}
+#menu ul li a{width: 88px; height: 54px; line-height: 54px; text-align: center;background-color: #fff;color: #ff4466;display: block}
+#menu ul li a:hover,#menu ul li a.cur{background-color: #ff4466;color: #fff;}

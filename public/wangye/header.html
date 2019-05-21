@@ -1,0 +1,31 @@
+<header class="head">
+    <div class="container">
+        <div class="row p-2">
+            <div class="col-lg-4 col-sm-12">
+                <!-- logo-->
+                <a href="#" class="navbar-brand"><img src="../image/index/logo.png" alt=""/></a>
+            </div>
+            <div class="col-lg-5 col-sm-12 mt-2 suos">
+                <input type="text" class="my_input" placeholder="请输入您要的商品或者店铺">
+                <img src="../image/index/ss.png" alt="" class="s_img">
+            </div>
+            <div class="col-lg-3 col-sm-12">
+                <!-- logo-->
+                <ul class="list-unstyled d-flex mt-3">
+                    <li class="welcome pr-3 ml-4"></li>
+                    <li class="pr-2"><a href="login.html" class="text-white">登录 | </a></li>
+                    <li class="pr-2"><a href="registe.html" class="text-white"> 注册 </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+ <script>
+    var n=sessionStorage.getItem("loginName");
+    console.log(n);
+    if(n){
+        var html="<img src='../image/index/user.png' style='width:28px;'>"+n;
+        var welcome=document.querySelector(".welcome");
+        welcome.innerHTML=html;
+    }
+</script>
+</header>

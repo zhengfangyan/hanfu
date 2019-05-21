@@ -1,0 +1,110 @@
+*{margin:0;padding:0;}
+/* 顶部 */
+.container-fluid{
+  height:80px;
+  background:#ff4466;
+}
+.top i{
+	display: inline-block;
+  width: 299px;
+  height: 58px;
+  background: url(../image/base_icon.png) no-repeat 0 26px;
+}
+ .top {
+  text-align:center;
+	color:#fff;
+  font-size:50px;
+  font-family:"STXingkai";
+} 
+/* 主体 */
+.contain{
+  position: relative;
+  background:url("../image/index/lg.jpg");
+  background-size:contain;
+  margin:1% 0 ; 
+  width:100%;
+  color:#000;
+  font-size: 18px;
+}
+.from_top{
+  height: 50px;
+  background: #f6f6f6;
+  border-bottom: 1px solid #ccc; 
+}
+.from_top span{
+  line-height: 50px;
+  margin-left:2rem;
+  font-size: 1.3rem;
+}
+.center {
+  margin:7rem 0 7rem 7rem ;
+  box-shadow: 1px 0px 0px 23px rgba(0,0,0,0.4);
+	background:#fff;
+	border-right:1px solid #ccc;
+}
+.left,.right{float:left;}
+.left{
+  margin:3rem 0.5rem 0 3.2rem; 
+  padding-right:2rem; 
+  border-right:1px solid #ccc;
+}
+.right .l_01 {
+	display: inline-block;
+	width: 218px;
+	height: 57px;
+	background: url(../image/base_icon.png) no-repeat -85px -27px;
+}
+.p_1,.p_2{font-size: 16px;}
+.p_1{color:#ff4466;}
+.right .l_02{
+	display: inline-block;
+	width: 218px;
+	height: 44px;
+	background: url(../image/base_icon.png) no-repeat -84px -85px;
+}
+.right .l_03 {
+	display: inline-block;
+    width: 218px;
+    height: 44px;
+    background: url(../image/base_icon.png) no-repeat -85px -129px;
+}
+ .d1 .input01{
+  border:0;
+  width:270px;
+  height:50px; 
+  padding-left:5px;
+  box-sizing:border-box;
+  outline:none;
+}
+.left .d1{border:1px solid #ccc;}
+div .i_01{
+  display: inline-block;
+  width: 24px;
+  height: 20px;
+  background: url(../image/base_icon.png) no-repeat -85px -179px;
+}
+div .i_02{
+  display: inline-block;
+    width: 24px;
+    height: 29px;
+    background: url(../image/base_icon.png) no-repeat -86px -196px;
+}
+div input[type=text]::-webkit-input-placeholder{font-size: 16px; }
+div input[type=password]::-webkit-input-placeholder{font-size: 16px; }
+button{
+  width:294px;
+  height:40px;
+  border:0;
+  color:#fff;
+  background-image:-webkit-linear-gradient(left,#fd637f 0%,#ff4466 100%);
+  background-image:-moz-linear-gradient(left,#fd637f 0%,#ff4466 100%);
+  background-image:-ms-linear-gradient(left,#fd637f 0%,#ff4466 100%);
+  background-image:-o-linear-gradient(left,#fd637f 0%,#ff4466 100%);
+  border-radius: 2px;
+}
+footer{
+  text-align:center;
+  color:#ff4466;
+  font-size:35px;
+  font-family:"STXingkai";
+}

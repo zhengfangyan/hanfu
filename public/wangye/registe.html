@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+	<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/bootstrap.css"/>
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/popper.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <title>注册</title>
+        <link rel="stylesheet" href="../css/comment.css"/>
+			<link rel="stylesheet" href="../css/registe.css"/>
+			<link rel="shortcut icon" href="../image/index/title.jpg">
+    </head>
+    <body>
+        <div class="container-fluid  m-0">
+            <div class="top_1 col-12 p-0">
+                <span class="s1">汉服荟</span>
+                <span class="s2">.注册</span>
+            </div>
+        </div>
+        <div id="center">      
+            <div class="contain mb-0 p-0 ml-0 mr-0">
+                <div class="reg"> 
+                <p> <span>新用户注册 </span> <span class="sp1 ml-4"><a href="login.html;" >直接登录</a></span></p>  
+                <hr>  
+		  <div class="mt-2">
+			登录名称： <input type='text' id='uname'  onfocus="uname_focus()" onblur="check_uname() " class="input01"  placeholder="请输入用户名">
+			<span id="uname_msg"></span>
+		</div>
+        <div class="mt-2">
+			登录密码： <input type='password' id='upwd' onfocus="upwd_focus()" onblur="check_upwd()" class="input01" placeholder="请输入密码">
+			<span id="upwd_msg"></span>
+        </div>
+        <div class="mt-2" >
+			用户性别： <input type="radio" name="gender" id='man' class="input02">男
+                 <input type="radio" name="gender" id="woman" class="input02">女
+		</div>
+		<div class="mt-2">
+		 电子邮箱： <input type='email' id='email' class="input01" placeholder="请输入电子邮箱">
+		</div>
+        <div class="mt-2">
+			联系方式： <input type='text' id='phone' class="input01" placeholder="请输入手机号码">
+		</div>
+		<div class="mt-2">
+			真实姓名： <input type='text' id='user_name' class="input01" placeholder="请输入真实姓名">
+		</div>
+      <button onclick="register()">注册</button>
+    </div>
+      </div>
+</div>
+<footer></footer>
+<script src="../js/footer.js"></script>
+		<script>
+		//用户名框获得焦点时调用
+			function uname_focus(){
+				uname_msg.innerHTML="用户名6~12位";
+			}
+			//密码框获得焦点时调用
+      function upwd_focus(){
+				upwd_msg.innerHTML="密码6~12位";
+			}
+			//用户名框失去焦点，验证用户名是否为空
+			function check_uname(){
+				//1.得到用户名框的值
+				var userName=uname.value;
+        //2.判断userName是否为空
+				if(userName==""){
+					uname_msg.innerHTML="用户名不能为空";
+				}else if(userName.length<6){
+					uname_msg.innerHTML="用户名小于6位";
+				}else{
+					uname_msg.innerHTML="通过";
+				}
+				}
+      //密码空失去焦点，验证密码是否为空
+	    function check_upwd(){
+			var userUpwd=upwd.value;
+			if(userUpwd==""){
+				upwd_msg.innerHTML="密码不能为空";
+				}
+        else if(userUpwd.length<6){
+					uname_msg.innerHTML="密码小于6位";
+			 }else{
+			  upwd_msg.innerHTML="通过";
+			}
+			}
+			function register(){
+			//1.创建异步对象
+			var xhr=new XMLHttpRequest();
+			console.log(xhr);
+			//2.绑定监听
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4&&xhr.status==200){
+				var result=xhr.responseText;
+				 if(result==1){
+				 	window.location.href="http://127.0.0.1:8080/wangye/login.html";
+				 }
+				}
+				}
+			//3.打开连接
+			xhr.open("post","/mypor/register",true);
+			//4.发送请求
+			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+			var ugender="";
+				if(man.checked){ugender="1"}
+				else if(woman.checked){ugender="0"}
+				else{ugender="null"}
+			var formdata="uname="+uname.value+"&upwd="+upwd.value+"&email="+email.value+"&phone="+phone.value+"&user_name="+user_name.value+"&gender="+ugender;
+		  xhr.send(formdata);
+			}
+		 function check_uname(){
+      //1.创建小黄人
+      var xhr=new XMLHttpRequest();
+      //2.绑定监听
+      xhr.onreadystatechange=function(){
+        if(xhr.readyState==4&&xhr.status==200){
+          var result=xhr.responseText;
+          if(result==1){
+            uname_msg.innerHTML="可以注册";
+          }else{
+            uname_msg.innerHTML="用户名存在";
+          }
+        }
+      }
+      //3.打开连接
+      xhr.open("get","/mypor/checkUname?uname="+uname.value,true);
+      //4.发送请求
+      xhr.send(null);
+    }
+		</script>
+	</body>
+</html>

@@ -1,0 +1,107 @@
+header .top ul{
+  background: #3e3e3e;
+  margin-bottom: 0px;
+}
+header .top ul li{
+  margin-left:0.5rem ;
+  padding:0.4rem;
+}
+header .top ul li a{
+  color:#ccc;
+  font-size: 12px;
+  margin:0 0.5rem 0 0.5rem;
+}
+header .top ul li:hover a,.tupiao{
+  color: #ff4466;
+}
+.top .tupiao{
+  width: 13px;
+  height: 12px;
+  display: inline-block;
+  background: url(../image/base_icon.png) no-repeat 0 -308px;
+}
+header .top ul li:hover .tupiao{
+  background: url(../image/base_icon.png) no-repeat -16px -308px;
+}
+.nav{
+  background:#5f5f5f;
+  padding:0.8rem;
+}
+.tt{
+  width: 145px;
+  height:36px;
+  display: inline-block;
+  background: url(../image/base_icon.png) no-repeat 0px -327px;
+  margin:0 1rem 0 0;
+}
+span{
+  color: #a7a7a7;
+  font-size: 20px;
+}
+/*  */
+.container-fulid{background:#fff;}
+.join_a{text-align: center;}
+.join_a a{
+  color:#ff4466;
+  padding: 12px 36px;
+  font-size: 32px;
+  margin: auto;
+  border: 1px solid #ff4466;
+}
+.join_desc{
+  margin-top: 6rem;
+  margin-bottom: 8rem;
+}
+.join_desc p,.join_rule li,.join_other p{
+  color:#555;
+  font-size: 14px;
+}
+.join_rule ul:nth-child(1),.join_rule ul:nth-child(2){
+  border-right:1px dashed #ccc;
+}
+ul .item01{
+  display: inline-block;
+  width:75px;
+  height: 57px;
+  background: url(../image/base_icon.png) no-repeat -211px -327px;
+}
+ul .item02{
+  display: inline-block;
+  width:75px;
+  height: 57px;
+  background: url(../image/base_icon.png) no-repeat -273px -324px;
+}
+ul .item03{
+  display: inline-block;
+  width:75px;
+  height: 57px;
+  background: url(../image/base_icon.png) no-repeat -345px -323px;
+}
+h3{
+  margin-top:0.5rem;
+}
+.join_other .title{
+  font-size: 28px;
+  color: #ff4466;
+  margin-top: 3rem;
+}
+.join_other .details{
+  background: #ff4466;
+  color:#fff;
+  padding:0.1rem;
+}
+.right{margin-left:15rem;}
+.phone{
+  display: inline-block;
+    width: 46px;
+    height: 32px;
+    background: url(../image/base_icon.png) no-repeat -419px -323px;
+}
+.tel{
+  display: inline-block;
+    width: 46px;
+    height: 28px;
+    background: url(../image/base_icon.png) no-repeat -457px -323px;
+}
+i .footer{background: #000;}
+footer .foot{background: #f6f6f6;}
